@@ -1,0 +1,24 @@
+:root {
+    --bg: #fff;
+    --bg-secondary: #fafafa;
+    --text: #111;
+    --muted: #666;
+    --border: #e5e5e5;
+    --accent: #111;
+    --accent-hover: #333;
+    --max: 680px;
+    --wide: 960px;
+    --radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0a0a0a;
+        --bg-secondary: #111;
+        --text: #f0f0f0;
+        --muted: #888;
+        --border: #222;
+        --accent: #f0f0f0;
+        --accent-hover: #ccc;
+    }
+}

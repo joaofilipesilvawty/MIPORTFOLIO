@@ -1,0 +1,32 @@
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: var(--type-label);
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  color: var(--muted);
+  margin-bottom: var(--space-label);
+}
+
+.section-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: var(--type-page-title);
+  font-weight: 400;
+  letter-spacing: var(--track-heading);
+  line-height: var(--lh-heading);
+  margin-bottom: var(--space-heading);
+}
+
+.section-text {
+  color: var(--muted);
+  max-width: var(--max);
+  font-size: var(--type-body);
+  line-height: var(--lh-lead);
+}

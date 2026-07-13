@@ -1,0 +1,25 @@
+/* Fade-in animation on scroll */
+@media (prefers-reduced-motion: no-preference) {
+  .project,
+  .about-item,
+  .stack span {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fade-up 0.5s ease forwards;
+  }
+
+  .project:nth-child(1) { animation-delay: 0.05s; }
+  .project:nth-child(2) { animation-delay: 0.1s; }
+  .project:nth-child(3) { animation-delay: 0.15s; }
+
+  .about-item:nth-child(1) { animation-delay: 0.05s; }
+  .about-item:nth-child(2) { animation-delay: 0.1s; }
+  .about-item:nth-child(3) { animation-delay: 0.15s; }
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

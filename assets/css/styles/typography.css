@@ -1,0 +1,36 @@
+/* ============================================================================
+   TYPE SCALE — proporcional em todo o site
+   Base 16px · ratio ~1.125 entre níveis de corpo
+   ============================================================================ */
+
+:root {
+  --type-label: 0.75rem;
+  --type-caption: 0.8125rem;
+  --type-body-sm: 0.875rem;
+  --type-body: 1rem;
+  --type-title: 1.125rem;
+  --type-heading-sm: clamp(1.5rem, 2.5vw, 2.125rem);
+  --type-heading: clamp(1.875rem, 3.8vw, 3rem);
+  --type-display: clamp(2.375rem, 5vw, 3.9375rem);
+  --type-hero: clamp(3rem, 8.5vw, 6.25rem);
+  --type-stat: clamp(4rem, 10vw, 6.5rem);
+  --type-stat-sm: clamp(3.5rem, 18vw, 5rem);
+  --type-page-title: clamp(1.875rem, 4.5vw, 2.75rem);
+  --type-cta: clamp(1.875rem, 4vw, 3rem);
+  --type-email: clamp(1.125rem, 2.5vw, 1.75rem);
+
+  --lh-tight: 1.1;
+  --lh-heading: 1.12;
+  --lh-title: 1.25;
+  --lh-body: 1.65;
+  --lh-lead: 1.75;
+
+  --track-heading: -0.03em;
+  --track-title: -0.015em;
+  --track-label: 0.06em;
+
+  --space-label: 1.25rem;
+  --space-heading: 1.5rem;
+  --space-lead: 2.5rem;
+  --space-block: 3rem;
+}

@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: var(--type-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(90%, var(--wide));
+  margin: 0 auto;
+}
+
+.container--narrow {
+  width: min(90%, var(--max));
+}

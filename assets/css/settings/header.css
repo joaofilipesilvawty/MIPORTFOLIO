@@ -1,0 +1,95 @@
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.logo {
+  font-family: 'Instrument Serif', serif;
+  font-size: var(--type-title);
+  font-weight: 400;
+  letter-spacing: var(--track-title);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: var(--type-body-sm);
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Menu button (hamburger) */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 11;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -6px;
+}
+
+.menu-icon::after {
+  top: 6px;
+}
+
+.menu-btn.active .menu-icon {
+  background: transparent;
+}
+
+.menu-btn.active .menu-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-btn.active .menu-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
