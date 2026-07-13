@@ -5,11 +5,6 @@
 @import './settings/base.css';
 @import './settings/header.css';
 @import './settings/sections.css';
-@import './settings/hero.css';
-@import './settings/about.css';
-@import './settings/projects.css';
-@import './settings/stack.css';
-@import './settings/contact.css';
 @import './settings/footer.css';
 @import './settings/modal.css';
 @import './settings/animations.css';
