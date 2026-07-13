@@ -8,31 +8,28 @@
     <meta property="og:description" content="Engenharia de software e design de interfaces.">
     <meta property="og:type" content="website">
     <title>João Filipe Silva</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <div class="site-bg" aria-hidden="true"></div>
 
     <header class="header">
-        <div class="container nav">
-            <a href="#inicio" class="logo">João Filipe Silva</a>
-            <button class="menu-btn" id="menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span class="menu-icon"></span>
-            </button>
-            <nav id="nav-menu" class="nav-links" role="navigation">
-                <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#projetos" class="nav-link">Projetos</a>
-                <a href="#stack" class="nav-link">Stack</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </nav>
-        </div>
+        <a href="#inicio" class="logo" aria-label="João Filipe Silva">JFS</a>
+        <button class="menu-btn" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+        </button>
+        <nav id="nav-menu" class="nav-links" role="navigation">
+            <a href="#inicio" class="nav-link active">Início</a>
+            <a href="#sobre" class="nav-link">Sobre</a>
+            <a href="#projetos" class="nav-link">Projetos</a>
+            <a href="#stack" class="nav-link">Stack</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
     </header>
 
     <main>
         <section id="inicio" class="hero">
-            <div class="container container--narrow">
+            <div class="container container--narrow reveal">
                 <p class="section-label">Portfólio</p>
                 <h1>Software e interfaces, com simplicidade.</h1>
                 <p>Engenheiro de software e designer de interações. Código limpo, interfaces claras.</p>
@@ -44,21 +41,21 @@
         </section>
 
         <section id="sobre">
-            <div class="container container--narrow">
+            <div class="container container--narrow reveal">
                 <p class="section-label">Sobre</p>
                 <h2 class="section-title">Menos ruído, mais foco.</h2>
                 <p class="section-text">Procuro simplicidade no código e na estética — remover o supérfluo para centrar o que importa.</p>
 
                 <div class="about-list">
-                    <article class="about-item">
+                    <article class="about-item reveal">
                         <h3>Front-end</h3>
                         <p>Interfaces responsivas com tecnologias modernas, focadas em experiência e performance.</p>
                     </article>
-                    <article class="about-item">
+                    <article class="about-item reveal">
                         <h3>Back-end & APIs</h3>
                         <p>Sistemas escaláveis, integração de bases de dados e APIs seguras.</p>
                     </article>
-                    <article class="about-item">
+                    <article class="about-item reveal">
                         <h3>Design de interface</h3>
                         <p>Layouts funcionais entre restrições técnicas e sensibilidade visual.</p>
                     </article>
@@ -67,14 +64,14 @@
         </section>
 
         <section id="projetos">
-            <div class="container">
+            <div class="container reveal">
                 <p class="section-label">Projetos</p>
                 <h2 class="section-title">Trabalho selecionado</h2>
 
                 <div class="projects">
-                    <button class="project" data-project="0" type="button">
+                    <button class="project reveal" data-project="0" type="button">
                         <div class="project-img">
-                            <img src="assets/project1.png" alt="Aurora Analytics" loading="lazy">
+                            <img src="assets/images/project1.png" alt="Aurora Analytics" loading="lazy">
                         </div>
                         <div>
                             <p class="project-meta">SaaS · 2023</p>
@@ -83,9 +80,9 @@
                         </div>
                     </button>
 
-                    <button class="project" data-project="1" type="button">
+                    <button class="project reveal" data-project="1" type="button">
                         <div class="project-img">
-                            <img src="assets/project2.png" alt="Volt Minimal Store" loading="lazy">
+                            <img src="assets/images/project2.png" alt="Volt Minimal Store" loading="lazy">
                         </div>
                         <div>
                             <p class="project-meta">Mobile · 2023</p>
@@ -94,9 +91,9 @@
                         </div>
                     </button>
 
-                    <button class="project" data-project="2" type="button">
+                    <button class="project reveal" data-project="2" type="button">
                         <div class="project-img">
-                            <img src="assets/project3.png" alt="Structura Portal" loading="lazy">
+                            <img src="assets/images/project3.png" alt="Structura Portal" loading="lazy">
                         </div>
                         <div>
                             <p class="project-meta">Web 3D · 2023</p>
@@ -109,28 +106,28 @@
         </section>
 
         <section id="stack">
-            <div class="container container--narrow">
+            <div class="container container--narrow reveal">
                 <p class="section-label">Stack</p>
                 <h2 class="section-title">Ferramentas</h2>
                 <p class="section-text">Tecnologias que utilizo no dia a dia.</p>
 
                 <div class="stack">
-                    <span>JavaScript</span>
-                    <span>TypeScript</span>
-                    <span>React</span>
-                    <span>Next.js</span>
-                    <span>HTML & CSS</span>
-                    <span>Node.js</span>
-                    <span>PostgreSQL</span>
-                    <span>MongoDB</span>
-                    <span>Docker</span>
-                    <span>Git</span>
+                    <span class="reveal">JavaScript</span>
+                    <span class="reveal">TypeScript</span>
+                    <span class="reveal">React</span>
+                    <span class="reveal">Next.js</span>
+                    <span class="reveal">HTML & CSS</span>
+                    <span class="reveal">Node.js</span>
+                    <span class="reveal">PostgreSQL</span>
+                    <span class="reveal">MongoDB</span>
+                    <span class="reveal">Docker</span>
+                    <span class="reveal">Git</span>
                 </div>
             </div>
         </section>
 
         <section id="contacto">
-            <div class="container">
+            <div class="container reveal">
                 <p class="section-label">Contacto</p>
                 <h2 class="section-title">Vamos conversar</h2>
 
@@ -168,7 +165,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="container">
             <p>© 2026 João Filipe Silva</p>
         </div>
@@ -188,6 +185,6 @@
         </div>
     </div>
 
-    <script src="index.js" defer></script>
+    <script type="module" src="assets/js/index.js"></script>
 </body>
 </html>

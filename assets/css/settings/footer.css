@@ -1,8 +1,16 @@
 /* Footer */
 .footer {
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
-  font-size: 0.8125rem;
-  color: var(--muted);
-  text-align: center;
+  position: relative;
+  padding: 0 80px 4rem 160px;
+  overflow: hidden;
+}
+
+.footer .container {
+  padding: 0;
+}
+
+.footer p {
+  font-size: var(--type-label);
+  color: var(--text-subtle);
+  line-height: var(--lh-title);
 }

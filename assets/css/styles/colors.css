@@ -1,24 +1,38 @@
 :root {
-    --bg: #fff;
-    --bg-secondary: #fafafa;
-    --text: #111;
-    --muted: #666;
-    --border: #e5e5e5;
-    --accent: #111;
-    --accent-hover: #333;
-    --max: 680px;
-    --wide: 960px;
-    --radius: 4px;
-}
+  --bg: #ffffff;
+  --bg-elevated: #e6e3f2;
+  --bg-card: #dcd8ee;
+  --text: #14082a;
+  --text-muted: rgba(20, 8, 42, 0.62);
+  --text-subtle: rgba(20, 8, 42, 0.42);
+  --purple: #5818a8;
+  --purple-mid: #6a22bc;
+  --purple-light: #7a30c8;
+  --purple-dark: #3d0e72;
+  --purple-glow: rgba(88, 24, 168, 0.35);
+  --purple-soft: rgba(88, 24, 168, 0.1);
+  --purple-softer: rgba(88, 24, 168, 0.06);
+  --purple-border: rgba(88, 24, 168, 0.22);
+  --border-subtle: rgba(88, 24, 168, 0.12);
+  --border-medium: rgba(88, 24, 168, 0.2);
+  --surface-line: rgba(88, 24, 168, 0.08);
+  --bg-glow: 55, 38, 176;
+  --bg-glow-mid: 62, 44, 190;
+  --bg-glow-accent: 58, 40, 182;
+  --white: #ffffff;
+  --header-h: 72px;
+  --container: 1080px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0a0a0a;
-        --bg-secondary: #111;
-        --text: #f0f0f0;
-        --muted: #888;
-        --border: #222;
-        --accent: #f0f0f0;
-        --accent-hover: #ccc;
-    }
+  /* aliases usados no portfólio */
+  --bg-secondary: var(--bg-elevated);
+  --muted: var(--text-muted);
+  --border: var(--border-subtle);
+  --accent: var(--purple);
+  --accent-hover: var(--purple-dark);
+  --max: 680px;
+  --wide: var(--container);
+  --radius: 999px;
 }

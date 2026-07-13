@@ -1,53 +1,88 @@
 /* Header */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  transition: background 0.2s;
-}
-
-.nav {
+  left: 0;
+  right: 0;
+  z-index: 100;
+  isolation: isolate;
+  height: var(--header-h);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 0;
+  justify-content: flex-end;
+  padding: 0 32px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.header > * {
+  pointer-events: auto;
 }
 
 .logo {
-  font-family: 'Instrument Serif', serif;
-  font-size: var(--type-title);
-  font-weight: 400;
-  letter-spacing: var(--track-title);
+  position: relative;
+  z-index: 2;
+  font-family: 'Expose', var(--font);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--purple);
+  text-decoration: none;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.72;
+  text-decoration: none;
 }
 
 .nav-links {
+  position: fixed;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%) translateZ(1px);
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  z-index: 101;
+  pointer-events: auto;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .nav-link {
-  font-size: var(--type-body-sm);
-  color: var(--muted);
-  transition: color 0.2s;
+  position: relative;
+  z-index: 2;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg) translateZ(2px);
+  color: var(--text-muted);
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  white-space: nowrap;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--text);
+  color: var(--purple);
   text-decoration: none;
+  transform: rotate(180deg) translateX(4px) translateZ(2px);
 }
 
-/* Menu button (hamburger) */
+/* Menu button (mobile) */
 .menu-btn {
   display: none;
+  position: relative;
+  z-index: 102;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  position: relative;
-  z-index: 11;
 }
 
 .menu-icon,
@@ -56,7 +91,7 @@
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--text);
+  background: var(--purple);
   border-radius: 1px;
   transition: transform 0.25s, opacity 0.25s;
 }
