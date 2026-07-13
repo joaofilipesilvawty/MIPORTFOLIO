@@ -1,14 +1,8 @@
-/* Footer */
 .footer {
   position: relative;
   padding: 0 80px 4rem 160px;
-  overflow: hidden;
 }
-
-.footer .container {
-  padding: 0;
-}
-
+.footer .container { padding: 0; }
 .footer p {
   font-size: var(--type-label);
   color: var(--text-subtle);

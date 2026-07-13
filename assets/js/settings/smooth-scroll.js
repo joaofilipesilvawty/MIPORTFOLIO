@@ -38,8 +38,6 @@ function initSmoothScroll() {
   });
 }
 
-export function getLenis() {
-  return lenis;
-}
+export function getLenis() { return lenis; }
 
 document.addEventListener('DOMContentLoaded', initSmoothScroll);

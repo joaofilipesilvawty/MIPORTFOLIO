@@ -30,7 +30,6 @@ function closeModal() {
 function initModal() {
   const modal = document.getElementById('modal');
   const closeBtn = document.getElementById('modal-close');
-
   if (!modal) return;
 
   document.querySelectorAll('.project').forEach((btn) => {

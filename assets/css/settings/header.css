@@ -1,4 +1,3 @@
-/* Header */
 .header {
   position: fixed;
   top: 0;
@@ -14,10 +13,7 @@
   background: transparent;
   pointer-events: none;
 }
-
-.header > * {
-  pointer-events: auto;
-}
+.header > * { pointer-events: auto; }
 
 .logo {
   position: relative;
@@ -28,21 +24,16 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--purple);
-  text-decoration: none;
   line-height: 1;
   transition: opacity 0.2s ease;
 }
-
-.logo:hover {
-  opacity: 0.72;
-  text-decoration: none;
-}
+.logo:hover { opacity: 0.72; }
 
 .nav-links {
   position: fixed;
   left: 32px;
   top: 50%;
-  transform: translateY(-50%) translateZ(1px);
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,27 +45,23 @@
 
 .nav-link {
   position: relative;
-  z-index: 2;
   font-size: 0.9375rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  transform: rotate(180deg) translateZ(2px);
+  transform: rotate(180deg);
   color: var(--text-muted);
   transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   white-space: nowrap;
 }
-
 .nav-link:hover,
 .nav-link.active {
   color: var(--purple);
-  text-decoration: none;
-  transform: rotate(180deg) translateX(4px) translateZ(2px);
+  transform: rotate(180deg) translateX(4px);
 }
 
-/* Menu button (mobile) */
 .menu-btn {
   display: none;
   position: relative;
@@ -85,9 +72,7 @@
   padding: 0.5rem;
 }
 
-.menu-icon,
-.menu-icon::before,
-.menu-icon::after {
+.menu-icon, .menu-icon::before, .menu-icon::after {
   display: block;
   width: 20px;
   height: 2px;
@@ -95,36 +80,14 @@
   border-radius: 1px;
   transition: transform 0.25s, opacity 0.25s;
 }
-
-.menu-icon {
-  position: relative;
-}
-
-.menu-icon::before,
-.menu-icon::after {
+.menu-icon { position: relative; }
+.menu-icon::before, .menu-icon::after {
   content: '';
   position: absolute;
   left: 0;
 }
-
-.menu-icon::before {
-  top: -6px;
-}
-
-.menu-icon::after {
-  top: 6px;
-}
-
-.menu-btn.active .menu-icon {
-  background: transparent;
-}
-
-.menu-btn.active .menu-icon::before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.menu-btn.active .menu-icon::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
+.menu-icon::before { top: -6px; }
+.menu-icon::after { top: 6px; }
+.menu-btn.active .menu-icon { background: transparent; }
+.menu-btn.active .menu-icon::before { top: 0; transform: rotate(45deg); }
+.menu-btn.active .menu-icon::after { top: 0; transform: rotate(-45deg); }

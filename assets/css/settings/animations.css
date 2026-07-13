@@ -5,7 +5,6 @@
     opacity 0.65s var(--ease-out-expo),
     transform 0.65s var(--ease-out-expo);
 }
-
 .reveal.visible {
   opacity: 1;
   transform: translate3d(0, 0, 0);

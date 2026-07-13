@@ -8,11 +8,8 @@ function revealElement(el, delayMs = 0) {
     }, { once: true });
   };
 
-  if (delayMs > 0) {
-    setTimeout(apply, delayMs);
-  } else {
-    apply();
-  }
+  if (delayMs > 0) setTimeout(apply, delayMs);
+  else apply();
 }
 
 function revealGroup(entry) {
@@ -25,14 +22,11 @@ function revealGroup(entry) {
   }
 
   const pending = [...group.querySelectorAll('.reveal:not(.visible)')];
-  pending.forEach((el, i) => {
-    revealElement(el, i * 50);
-  });
+  pending.forEach((el, i) => revealElement(el, i * 50));
 }
 
-function initializeScrollReveal() {
+function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal');
-
   if (!reveals.length) return;
 
   const observer = new IntersectionObserver(
@@ -49,4 +43,4 @@ function initializeScrollReveal() {
   reveals.forEach((el) => observer.observe(el));
 }
 
-document.addEventListener('DOMContentLoaded', initializeScrollReveal);
+document.addEventListener('DOMContentLoaded', initScrollReveal);
