@@ -52,6 +52,25 @@
   color: var(--purple);
 }
 
+.btn--cv {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: transparent;
+  border: 1px solid var(--purple);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn--cv:hover {
+  background: var(--purple);
+  color: var(--bg);
+}
+
 .menu-btn {
   display: none;
   position: relative;
