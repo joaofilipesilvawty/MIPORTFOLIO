@@ -6,7 +6,7 @@
   height: var(--header-h);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 24px;
   gap: 1rem;
   background: transparent;
@@ -15,6 +15,8 @@
 .header > * { pointer-events: auto; }
 
 .logo {
+  position: absolute;
+  left: 24px;
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 500;
@@ -31,7 +33,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1.25rem;
   z-index: 101;
   pointer-events: auto;
