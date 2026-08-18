@@ -14,7 +14,7 @@ function revealElement(el, delayMs = 0) {
 
 function revealGroup(entry) {
   const target = entry.target;
-  const group = target.closest('.about-list, .projects, .stack');
+  const group = target.closest('.about-list, .projects, .skills-grid, .certs');
 
   if (!group) {
     revealElement(target);

@@ -9,14 +9,14 @@ function initContactForm() {
     const status = document.getElementById('form-status');
 
     btn.disabled = true;
-    btn.textContent = 'A enviar\u2026';
+    btn.textContent = 'Sending\u2026';
 
     setTimeout(() => {
       form.reset();
       btn.disabled = false;
-      btn.textContent = 'Enviar';
+      btn.textContent = 'Send';
       status.hidden = false;
-      status.textContent = 'Mensagem enviada.';
+      status.textContent = 'Message sent.';
       setTimeout(() => { status.hidden = true; }, 4000);
     }, 800);
   });

@@ -4,6 +4,7 @@
 }
 .footer .container { padding: 0; }
 .footer p {
+  font-family: var(--font-mono);
   font-size: var(--type-label);
   color: var(--text-subtle);
   line-height: var(--lh-title);

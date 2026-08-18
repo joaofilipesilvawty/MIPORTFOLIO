@@ -45,7 +45,7 @@
 
 .modal-box h2 {
   font-family: 'Instrument Serif', Georgia, serif;
-  font-size: var(--type-title);
+  font-size: var(--type-heading-sm);
   font-weight: 400;
   color: var(--text);
   margin-bottom: 0.75rem;
@@ -55,6 +55,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  font-family: var(--font-mono);
   font-size: var(--type-caption);
   color: var(--text-muted);
   margin-bottom: 1.5rem;
@@ -68,3 +69,13 @@
   line-height: var(--lh-body);
 }
 .modal-body p + p { margin-top: 1rem; }
+
+.modal-body ul {
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: var(--type-body-sm);
+  line-height: var(--lh-body);
+}
+.modal-body li + li { margin-top: 0.35rem; }
+.modal-body li::marker { color: var(--purple); }

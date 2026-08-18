@@ -79,3 +79,8 @@ button {
   padding: 0 24px;
 }
 .container--narrow { max-width: var(--max); }
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
