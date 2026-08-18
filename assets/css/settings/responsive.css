@@ -44,6 +44,7 @@
     position: absolute;
     right: 20px;
   }
+  .btn--cv { display: none; }
 
   .project, .contact-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
