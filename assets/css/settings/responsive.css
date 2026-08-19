@@ -39,9 +39,12 @@
     letter-spacing: 0.03em;
   }
   .nav-link:hover, .nav-link.active { transform: none; }
-  .menu-btn { display: block; }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
   .btn--cv { display: none; }
-}
 
   .project, .contact-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
