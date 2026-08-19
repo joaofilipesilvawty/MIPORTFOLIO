@@ -27,11 +27,10 @@
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
-            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#badges" class="nav-link">Badges</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
-        <a href="assets/files/cv.pdf" class="btn btn--cv" target="_blank" rel="noopener noreferrer" download>CV</a>
         <button class="menu-btn" id="menu-toggle" aria-label="Menu" aria-expanded="false">
             <span class="menu-icon"></span>
         </button>
@@ -40,12 +39,12 @@
     <main>
         <section id="home" class="hero">
             <div class="container container--narrow reveal">
-                <p class="hero-status">Open to opportunities</p>
                 <h1>Securing systems, <em>one layer</em> at a time.</h1>
                 <p>I&apos;m Jo&atilde;o Filipe Silva, a cybersecurity professional focused on threat detection, penetration testing, and building resilient infrastructure.</p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn">View projects</a>
                     <a href="#contact" class="btn btn--outline">Get in touch</a>
+                    <a href="assets/files/cv.pdf" class="btn" target="_blank" rel="noopener noreferrer" download>CV</a>
                 </div>
             </div>
         </section>
@@ -128,46 +127,13 @@
             </div>
         </section>
 
-        <section id="certifications">
+        <section id="badges">
             <div class="container container--narrow reveal">
-                <p class="section-label">Certifications</p>
-                <h2 class="section-title">Certificates &amp; badges</h2>
-                <p class="section-text">Credentials that back the practice.</p>
+                <p class="section-label">Badges</p>
+                <h2 class="section-title">Verified achievements</h2>
+                <p class="section-text">Click any badge to view verification on the issuer's site.</p>
 
-                <div class="certs">
-                    <article class="cert reveal">
-                        <span class="cert-code">CompTIA</span>
-                        <div class="cert-info">
-                            <h3>Security+ <span class="cert-badge">Certified</span></h3>
-                            <p>Core security concepts, threat management, and risk mitigation.</p>
-                        </div>
-                        <span class="cert-date">2025</span>
-                    </article>
-                    <article class="cert reveal">
-                        <span class="cert-code">TryHackMe</span>
-                        <div class="cert-info">
-                            <h3>Jr Penetration Tester <span class="cert-badge">Path</span></h3>
-                            <p>Hands-on offensive security path covering web, network, and privilege escalation.</p>
-                        </div>
-                        <span class="cert-date">2024</span>
-                    </article>
-                    <article class="cert reveal">
-                        <span class="cert-code">Cisco</span>
-                        <div class="cert-info">
-                            <h3>Introduction to Cybersecurity <span class="cert-badge">Badge</span></h3>
-                            <p>Security fundamentals, attack vectors, and network defense principles.</p>
-                        </div>
-                        <span class="cert-date">2024</span>
-                    </article>
-                    <article class="cert reveal">
-                        <span class="cert-code">HTB</span>
-                        <div class="cert-info">
-                            <h3>Hack The Box &mdash; Pro Hacker <span class="cert-badge">Rank</span></h3>
-                            <p>Active lab practice across machines, challenges, and seasonal CTF events.</p>
-                        </div>
-                        <span class="cert-date">Ongoing</span>
-                    </article>
-                </div>
+                <div class="badges-grid" id="badges-grid"></div>
             </div>
         </section>
 
