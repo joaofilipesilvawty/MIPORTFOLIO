@@ -1,7 +1,9 @@
 "use client";
 
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const EMAIL = "ola@joaofilipesilva.com";
 
 const projects = [
   {
@@ -10,6 +12,7 @@ const projects = [
     type: "Cibersegurança · Web",
     year: "2025",
     className: "project-sentinel",
+    caption: "monitorização contínua / lisboa",
   },
   {
     number: "02",
@@ -17,6 +20,7 @@ const projects = [
     type: "Estratégia · Infraestrutura",
     year: "2024",
     className: "project-zero",
+    caption: "acesso mínimo · confiança máxima",
   },
   {
     number: "03",
@@ -24,20 +28,36 @@ const projects = [
     type: "Investigação · Produto",
     year: "2024",
     className: "project-trace",
+    caption: "log 07 / análise concluída",
   },
 ];
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
+  const project = projects[activeProject];
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
-    <main>
+    <main id="top">
       <header className="site-header">
+        <div className="header-inner">
         <a className="wordmark" href="#top" aria-label="Página inicial">
           Joao Filipe Silva<span>®</span>
         </a>
         <nav
+          id="mobile-nav"
           className={menuOpen ? "nav-links open" : "nav-links"}
           aria-label="Navegação principal"
         >
@@ -51,23 +71,32 @@ export default function Page() {
             Contacto
           </a>
         </nav>
-        <a className="header-cta" href="mailto:ola@Joao Filipe Silvacosta.pt">
+        <a className="header-cta" href={`mailto:${EMAIL}`}>
           Vamos falar <ArrowUpRight size={15} />
         </a>
         <button
           className="menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-nav"
         >
           {menuOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
+        </div>
       </header>
+      {menuOpen ? (
+        <button
+          className="menu-backdrop"
+          type="button"
+          aria-label="Fechar menu"
+          onClick={() => setMenuOpen(false)}
+        />
+      ) : null}
 
-      <section id="top" className="hero section-wrap">
+      <section className="hero section-wrap">
         <div className="eyebrow">
-          <span className="status-dot" /> Disponível para novos projectos{" "}
-          <span className="hero-year">2025 — 26</span>
         </div>
         <h1>
           Ideias com
@@ -99,10 +128,7 @@ export default function Page() {
               ambiciosas, ajudo a encontrar o que torna uma ideia única — e a
               dar-lhe uma voz própria.
             </p>
-            <a
-              className="text-link"
-              href="mailto:ola@Joao Filipe Silvacosta.pt"
-            >
+            <a className="text-link" href={`mailto:${EMAIL}`}>
               Mais sobre mim <ArrowUpRight size={16} />
             </a>
           </div>
@@ -117,30 +143,30 @@ export default function Page() {
           </span>
         </div>
         <div className="project-list">
-          {projects.map((project, index) => (
+          {projects.map((item, index) => (
             <button
-              key={project.title}
+              key={item.title}
+              type="button"
               className={
                 activeProject === index ? "project-row active" : "project-row"
               }
               onClick={() => setActiveProject(index)}
+              onMouseEnter={() => setActiveProject(index)}
+              onFocus={() => setActiveProject(index)}
               aria-pressed={activeProject === index}
             >
-              <span className="project-number">{project.number}</span>
-              <span className="project-name">{project.title}</span>
-              <span className="project-type">{project.type}</span>
-              <span className="project-year">{project.year}</span>
+              <span className="project-number">{item.number}</span>
+              <span className="project-name">{item.title}</span>
+              <span className="project-type">{item.type}</span>
+              <span className="project-year">{item.year}</span>
               <ArrowUpRight className="project-arrow" size={20} />
             </button>
           ))}
         </div>
-        <div
-          className={`project-preview ${projects[activeProject].className}`}
-          aria-live="polite"
-        >
+        <div className={`project-preview ${project.className}`} aria-live="polite">
           <div className="preview-top">
-            <span>{projects[activeProject].title}</span>
-            <span>Projecto {projects[activeProject].number}</span>
+            <span>{project.title}</span>
+            <span>Projecto {project.number}</span>
           </div>
           <div className="preview-art">
             {activeProject === 0 && (
@@ -151,30 +177,22 @@ export default function Page() {
                   <br />
                   <i>by design.</i>
                 </strong>
-                <div className="security-caption">
-                  monitorização contínua / lisboa
-                </div>
               </>
             )}
             {activeProject === 1 && (
               <>
                 <div className="zero-word">ZERO</div>
                 <div className="zero-line" />
-                <div className="security-caption">
-                  acesso mínimo · confiança máxima
-                </div>
               </>
             )}
             {activeProject === 2 && (
-              <>
-                <div className="trace-title">
-                  TRACE
-                  <br />
-                  <span>PROTOCOL</span>
-                </div>
-                <div className="trace-bar">log 07 / análise concluída</div>
-              </>
+              <div className="trace-title">
+                TRACE
+                <br />
+                <span>PROTOCOL</span>
+              </div>
             )}
+            <div className="security-caption">{project.caption}</div>
           </div>
         </div>
       </section>
@@ -217,17 +235,17 @@ export default function Page() {
             <br />
             <em>Vamos dar-lhe forma.</em>
           </h2>
-          <a className="contact-email" href="mailto:ola@joaofilipesilva.com">
-            ola@joaofilipesilva.com <ArrowUpRight size={22} />
+          <a className="contact-email" href={`mailto:${EMAIL}`}>
+            {EMAIL} <ArrowUpRight size={22} />
           </a>
         </div>
       </section>
       <footer>
-        <span>© 2025 Joao Filipe Silva</span>
+        <span>© 2026 Joao Filipe Silva</span>
         <div className="socials">
-          <a href="#contacto">LinkedIn</a>
-          <a href="#contacto">Instagram</a>
-          <a href="#contacto">Behance</a>
+          <a href={`mailto:${EMAIL}`}>LinkedIn</a>
+          <a href={`mailto:${EMAIL}`}>Instagram</a>
+          <a href={`mailto:${EMAIL}`}>GitHub</a>
         </div>
         <span>Feito com intenção.</span>
       </footer>

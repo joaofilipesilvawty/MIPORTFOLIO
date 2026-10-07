@@ -77,8 +77,8 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$d
 ;
 ;
 const metadata = {
-    title: "Joao Filipe Silva — Designer & Directora Criativa",
-    description: "Portfolio de Joao Filipe Silva, designer e directora criativa independente."
+    title: "Joao Filipe Silva — Cibersegurança",
+    description: "Portfolio de Joao Filipe Silva, especialista em cibersegurança independente."
 };
 const viewport = {
     colorScheme: "light",

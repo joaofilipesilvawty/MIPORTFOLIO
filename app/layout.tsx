@@ -11,9 +11,9 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Joao Filipe Silva — Designer & Directora Criativa",
+  title: "Joao Filipe Silva — Cibersegurança",
   description:
-    "Portfolio de Joao Filipe Silva, designer e directora criativa independente.",
+    "Portfolio de Joao Filipe Silva, especialista em cibersegurança independente.",
 };
 
 export const viewport: Viewport = {
