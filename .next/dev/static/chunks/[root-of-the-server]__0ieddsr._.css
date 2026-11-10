@@ -404,6 +404,14 @@
 @layer components;
 
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
+
+  .block {
+    display: block;
+  }
+
   .hidden {
     display: none;
   }
@@ -987,18 +995,11 @@ main {
   display: flex;
 }
 
-.eyebrow, .section-label, .work-count {
+.section-label, .work-count {
   color: var(--muted-foreground);
   text-transform: uppercase;
   letter-spacing: .07em;
   font-size: 12px;
-}
-
-.eyebrow {
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 16px;
-  display: flex;
 }
 
 @keyframes pulse {

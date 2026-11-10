@@ -153,19 +153,12 @@ main {
   display: flex;
   flex-direction: column;
 }
-.eyebrow,
 .section-label,
 .work-count {
   color: var(--muted-foreground);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-}
-.eyebrow {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 16px;
 }
 @keyframes pulse {
   70% {

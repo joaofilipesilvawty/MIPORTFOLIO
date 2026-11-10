@@ -12,7 +12,7 @@ const projects = [
     type: "Cibersegurança · Web",
     year: "2025",
     className: "project-sentinel",
-    caption: "monitorização contínua / lisboa",
+    caption: "monitorização contínua",
   },
   {
     number: "02",
@@ -50,40 +50,40 @@ export default function Page() {
   }, [menuOpen]);
 
   return (
-    <main id="top">
+    <>
       <header className="site-header">
         <div className="header-inner">
-        <a className="wordmark" href="#top" aria-label="Página inicial">
-          Joao Filipe Silva<span>®</span>
-        </a>
-        <nav
-          id="mobile-nav"
-          className={menuOpen ? "nav-links open" : "nav-links"}
-          aria-label="Navegação principal"
-        >
-          <a href="#sobre" onClick={() => setMenuOpen(false)}>
-            Sobre
+          <a className="wordmark" href="#top" aria-label="Página inicial">
+            Joao Filipe Silva<span>®</span>
           </a>
-          <a href="#trabalho" onClick={() => setMenuOpen(false)}>
-            Trabalho
+          <nav
+            id="mobile-nav"
+            className={menuOpen ? "nav-links open" : "nav-links"}
+            aria-label="Navegação principal"
+          >
+            <a href="#sobre" onClick={() => setMenuOpen(false)}>
+              Sobre
+            </a>
+            <a href="#trabalho" onClick={() => setMenuOpen(false)}>
+              Trabalho
+            </a>
+            <a href="#contacto" onClick={() => setMenuOpen(false)}>
+              Contacto
+            </a>
+          </nav>
+          <a className="header-cta" href={`mailto:${EMAIL}`}>
+            Vamos falar <ArrowUpRight size={15} />
           </a>
-          <a href="#contacto" onClick={() => setMenuOpen(false)}>
-            Contacto
-          </a>
-        </nav>
-        <a className="header-cta" href={`mailto:${EMAIL}`}>
-          Vamos falar <ArrowUpRight size={15} />
-        </a>
-        <button
-          className="menu-button"
-          type="button"
-          onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-nav"
-        >
-          {menuOpen ? <X size={21} /> : <Menu size={21} />}
-        </button>
+          <button
+            className="menu-button"
+            type="button"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
+          >
+            {menuOpen ? <X size={21} /> : <Menu size={21} />}
+          </button>
         </div>
       </header>
       {menuOpen ? (
@@ -95,19 +95,17 @@ export default function Page() {
         />
       ) : null}
 
+      <main id="top">
       <section className="hero section-wrap">
-        <div className="eyebrow">
-        </div>
         <h1>
-          Ideias com
+          Antes que
           <br />
-          <em>forma.</em>
+          <em>aconteça.</em>
         </h1>
         <div className="hero-bottom">
           <p className="hero-intro">
-            Sou o Joao Filipe Silva, especialista em cibersegurança
-            independente. Protejo sistemas, encontro vulnerabilidades e
-            transformo risco em confiança.
+            Auditorias, defesa e resposta a incidentes para equipas que não
+            podem dar-se ao luxo de reagir tarde.
           </p>
           <a className="circle-link" href="#trabalho" aria-label="Ver trabalho">
             <ArrowUpRight size={25} />
@@ -249,6 +247,7 @@ export default function Page() {
         </div>
         <span>Feito com intenção.</span>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
